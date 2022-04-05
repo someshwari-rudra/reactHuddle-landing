@@ -1,10 +1,16 @@
-
-import './App.css';
+import Hero from "./components/Hero";
+import Card from "./components/Card"
+import { useState } from "react";
+import Cardcontent from "./components/CardContent"
+import Footer from "./components/Footer"
 
 function App() {
+  const [cardData,setCardData] = useState(Cardcontent)
   return (
     <>
-      <h1>someshwari</h1>
+    <Hero/>
+    <Card cardData={cardData}/>
+    <Footer/>
     </>
   );
 }

@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&family=Poppins:wght@600&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+:root{
+    --Pink: hsl(322, 100%, 66%);
+    --VeryPaleCyan: hsl(193, 100%, 96%);
+    --VeryDarkCyan: hsl(192, 100%, 9%);
+     --GrayishBlue: hsl(208, 11%, 55%);
+     --white:#fff;
+}
+
+.navBar{
+    min-height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+}
+.logo img{
+    height: 2rem;
+}
+.navBtn{
+    padding: 1rem 4rem;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Poppins',sans-serif;
+    background: var(--white);
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    box-shadow: 1px 1px 8px hsl(209, 25%, 79%);
+}
+.Container{
+    height: 100vh;
+    width: 100%;
+    background: url("./images/bg-hero-desktop.svg") ,var(--VeryPaleCyan);
+}
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.content{
+    width: 600px;
+    margin-right:80px ;
+  
+}
+.content h1{
+    font-size: 3rem;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 600;
+    color: var(--VeryDarkCyan);
+    
+
+}
+.content p{
+    font-family: 'Poppins',sans-serif;
+    font-size: 18px;
+    margin-top: 2rem;
+    font-weight: 700;
+    color: var(--GrayishBlue);
+}
+.content button{
+    padding: 1rem 4rem;
+    margin-top: 1rem;
+    border: none;
+    font-size: 18px;
+    border-radius: 40px;
+    color: var(--white);
+    background: var(--Pink);
+    box-shadow: 1px 1px 6px rgb(177, 177, 177);
+    cursor: pointer;
+}
+.image{
+    width: 50%;
+}
+.image img{
+    width: 100%;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: .5em;
+    justify-items: center;
+    align-items: center;
+    margin: 20px 30px;
+    padding: 3rem 8rem;
+    box-shadow: 1px 1px 10px rgb(154, 169, 172);
+    border-radius: 1rem;
+}
+.CardContainer{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+.Cardcontent{
+    width: 550px;
+}
+.Cardcontent h1{
+    font-size: 2.4rem;
+    font-family: 'Open Sans',
+    sans-serif;
+    font-weight: 600;
+    color: var(--VeryDarkCyan);
+}
+.Cardcontent p{
+    color: var(--GrayishBlue);
+    font-size: 20px;
+}
+.Cardimage img{
+    width: 500px;
+}
+@media only screen and (max-width: 800px) {
+    .Container{
+        background: url("./images/bg-hero-mobile.svg"),
+        var(--VeryPaleCyan);
+    }
+    .navBtn {
+        padding: 10px 30px;
+        font-size: 13px;
+        border-radius: 20px;
+    }
+    .logo img {
+        height: 1rem;
+    }
+    .navBar{
+        padding: 1rem 2rem;
+    }
+    .content{
+        margin-right: 0%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content h1{
+        font-size: 1.8rem;
+        text-align: center;
+        margin-left: 10px;
+    }
+    .content p{
+        font-size: 1rem;
+        margin-top: 1rem;
+        text-align: center;
+    }
+    .content button{
+        padding: .5rem 2rem;
+        margin-bottom: 20px;
+        font-size: 13px;
+    }
+    .image {
+        width: 100%;
+    }
+    .image img {
+       padding: 10px 20px;
+    }
+    .Cardcontent[role="cardData"] {
+        grid-area: Cardcontent;
+    }
+    
+    .Cardimage[role="CardImage"] {
+        grid-area: Cardimage;
+    }
+    .Cardcontent {
+        width: auto;
+    }
+    .card{
+        justify-items: start;
+        align-items: flex-start;
+        grid-template-areas: 'Cardimage'
+        'Cardcontent';
+        width: 90%;
+        margin: 10px 4px;
+        padding: 1rem 4rem;
+    }
+    .Cardimage img {
+        width: 200px;
+    }
+    .Cardcontent h1{
+        font-size: 1rem;
+    }
+    .Cardcontent p{
+        font-size: 13px;
+        text-align: justify;
+    }
+}
